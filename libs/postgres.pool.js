@@ -3,7 +3,7 @@ const { config } = require('../config/config');
 
 const USER = encodeURIComponent(config.USER);
 const PASS = encodeURIComponent(config.PASS);
-const URI = `mysql:://${USER}:${PASS}:@${config.dbHost}:${config.dbPort}/${config.dbname}`;
+const URI = `postgre:://${USER}:${PASS}:@${config.dbHost}:${config.dbPort}/${config.dbname}`;
 const pool = new Pool({ connectionString: URI });
 
 module.exports = pool;
